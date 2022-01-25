@@ -6,8 +6,7 @@ public class SecondHW {
         positiveOrNegative(-1);
         System.out.println(negative(-55));
         printWordNTimes("Hello!", 5);
-
-
+        System.out.println(isLeapYear(2112));
     }
 
     /* 1. Написать метод, принимающий на вход два целых числа и проверяющий,
@@ -53,5 +52,16 @@ public class SecondHW {
         }
     }
 
+    /* 5. Написать метод, который определяет, является ли год високосным,
+    и возвращает boolean (високосный - true, не високосный - false).
+    Каждый 4-й год является високосным, кроме каждого 100-го, при этом
+    каждый 400-й – високосный. */
 
+    public static boolean isLeapYear(int year) {
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

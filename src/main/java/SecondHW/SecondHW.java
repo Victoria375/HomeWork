@@ -4,6 +4,7 @@ public class SecondHW {
     public static void main(String[] args) {
         System.out.println(numbers10and20(20, 5));
         positiveOrNegative(-1);
+        System.out.println(negative(-55));
 
 
     }
@@ -36,8 +37,18 @@ public class SecondHW {
     если положительное. */
 
     public static boolean negative(int a) {
-
+        if (a < 0) {
+            return true;
+        }
+        return false;
     }
+
+
+
+
+
+
+
 
 
 }

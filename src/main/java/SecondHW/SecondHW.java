@@ -5,6 +5,7 @@ public class SecondHW {
         System.out.println(numbers10and20(20, 5));
         positiveOrNegative(-1);
         System.out.println(negative(-55));
+        printWordNTimes("Hello!", 5);
 
 
     }
@@ -43,12 +44,14 @@ public class SecondHW {
         return false;
     }
 
+    /* 4. Написать метод, которому в качестве аргументов передается строка и число,
+    метод должен отпечатать в консоль указанную строку, указанное количество раз. */
 
-
-
-
-
-
+    public static void printWordNTimes(String word, int times) {
+        for (int i = 0; i < times; i++) {
+            System.out.println(word);
+        }
+    }
 
 
 }

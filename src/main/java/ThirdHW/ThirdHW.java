@@ -91,9 +91,25 @@ public class ThirdHW {
 
         System.out.println("\n");
 
+        /* 7. Написать метод, в который передается не пустой одномерный целочисленный
+        массив, метод должен вернуть true, если в массиве есть место, в котором сумма
+        левой и правой части массива равны. */
+        int[] arr7 = {1, 2, 2, 1, 2, 1, 1, 1, 1};
+        System.out.println(checkBalance(arr7));
+    }
 
-
-
+    public static boolean checkBalance(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        int sumR = 0;
+        for (int i = 0; i < array.length; i++) {
+            sumR += array[i];
+            if (sumR == sum - sumR)
+                return true;
+        }
+        return false;
     }
 
     public static int[] returnArray(int len, int initialValue) {

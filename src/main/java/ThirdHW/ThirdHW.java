@@ -69,10 +69,28 @@ public class ThirdHW {
         /* 5. Написать метод, принимающий на вход два аргумента: len и initialValue,
         и возвращающий одномерный массив типа int длиной len, каждая ячейка которого
         равна initialValue */
-        int[] arr5 = returnArray(6,3);
+        int[] arr5 = returnArray(6, 3);
         print(arr5);
 
         System.out.println("\n");
+
+        /* 6. Задать одномерный массив и найти в нем минимальный и максимальный элементы */
+
+        int[] arr6 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 0};
+        int min = arr6[0];
+        int max = arr6[0];
+        for (int i = 1; i < arr6.length; i++) {
+            if (min > arr6[i]) {
+                min = arr6[i];
+            } else if (max < arr6[i]) {
+                max = arr6[i];
+            }
+        }
+        System.out.printf("Минимальный элемент = %s. \n", min);
+        System.out.printf("Максимальный элемент = %s.", max);
+
+        System.out.println("\n");
+
 
 
 

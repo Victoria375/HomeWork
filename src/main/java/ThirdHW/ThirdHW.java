@@ -46,6 +46,27 @@ public class ThirdHW {
 
         System.out.println("\n");
 
+        /* 4. Создать квадратный двумерный целочисленный массив (количество
+        строк и столбцов одинаковое), и с помощью цикла(-ов) заполнить его
+        диагональные элементы единицами (можно только одну из диагоналей,
+        если обе сложно). Определить элементы одной из диагоналей можно по
+        следующему принципу: индексы таких элементов равны, то есть [0][0],
+        [1][1], [2][2], …, [n][n] */
+        int[][] arr4 = new int[4][4];
+        print2(arr4);
+        for (int i = 0; i < arr4.length; i++) {
+            for (int j = 0; j < arr4.length; j++) {
+                if (i == j) {
+                    arr4[i][j] = 1;
+                }
+            }
+        }
+        System.out.println();
+        print2(arr4);
+
+        System.out.println("\n");
+
+
 
 
     }
@@ -53,6 +74,15 @@ public class ThirdHW {
     public static void print(int[] a) {
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + " ");
+        }
+    }
+
+    public static void print2(int[][] a) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length; j++) {
+                System.out.print(a[i][j] + "\t");
+            }
+            System.out.println();
         }
     }
 }

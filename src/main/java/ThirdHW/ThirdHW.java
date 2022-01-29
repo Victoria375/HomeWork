@@ -66,9 +66,24 @@ public class ThirdHW {
 
         System.out.println("\n");
 
+        /* 5. Написать метод, принимающий на вход два аргумента: len и initialValue,
+        и возвращающий одномерный массив типа int длиной len, каждая ячейка которого
+        равна initialValue */
+        int[] arr5 = returnArray(6,3);
+        print(arr5);
+
+        System.out.println("\n");
 
 
 
+    }
+
+    public static int[] returnArray(int len, int initialValue) {
+        int[] array = new int[len];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = initialValue;
+        }
+        return array;
     }
 
     public static void print(int[] a) {
